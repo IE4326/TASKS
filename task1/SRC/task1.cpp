@@ -9,7 +9,7 @@ void fill(char* filepath, std::vector<int64_t> &arr);
 void sort(std::vector<int64_t> &arr);
 int64_t findmiddle(std::vector<int64_t> &arr);
 int64_t findpercentile(std::vector<int64_t> &arr);
-std::vector<int64_t> getnewset(std::vector<int64_t> &old, int mid, int64_t per);
+std::vector<int64_t> getnewset(std::vector<int64_t> &old, int64_t mid, int64_t per);
 int countdigits(std::vector<int64_t> &arr);
 
 int main(int argc, char** argv){
@@ -87,7 +87,7 @@ int64_t findpercentile(std::vector<int64_t> &arr){
 }
 
 // Создаёт новый массив по условиям задачи. Получает на вход весь массив, среднее и перцентиль
-std::vector<int64_t> getnewset(std::vector<int64_t> &old, int mid, int64_t per){
+std::vector<int64_t> getnewset(std::vector<int64_t> &old, int64_t mid, int64_t per){
 	std::vector<int64_t> ns;
 	for (std::vector<int64_t>::iterator i = old.begin(); i < old.end(); i++){
 		if (*i > mid && *i < per) ns.push_back(*i);
